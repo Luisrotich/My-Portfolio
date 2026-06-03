@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <title>Luis Rotich | Software Engineer · Web3 · M-Pesa Expert</title>
+    <!-- Google Fonts + modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050B14;
+            color: #eef2ff;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        :root {
+            --primary: #3B82F6;
+            --primary-dark: #2563eb;
+            --accent: #06b6d4;
+            --dark-bg: #0a0f1c;
+            --card-bg: rgba(15, 23, 42, 0.7);
+            --glass-border: rgba(59,130,246,0.25);
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3B82F6;
+            border-radius: 8px;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ========== MOBILE-FIRST & RESPONSIVE ========== */
+        /* Top bar with logo image + mobile menu toggle */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            position: relative;
+            z-index: 1000;
+        }
+        .logo-img {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        .logo-img img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #d2730d;
+            background: #0f172a;
+            box-shadow: 0 0 12px rgba(210, 115, 13, 0.3);
+        }
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff, #60A5FA);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .menu-toggle {
+            background: rgba(59,130,246,0.2);
+            border: 1px solid rgba(59,130,246,0.4);
+            border-radius: 40px;
+            padding: 0.6rem 1rem;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: white;
+            transition: 0.2s;
+            display: none;
+        }
+        .menu-toggle:hover {
+            background: #d2730d;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #cbd5e6;
+            font-weight: 500;
+            transition: 0.2s;
+            font-size: 0.95rem;
+        }
+        .nav-links a:hover {
+            color: #60A5FA;
+        }
+        .btn-outline-light {
+            border: 1px solid #3B82F6;
+            background: transparent;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            color: white;
+            font-weight: 500;
+        }
+        .btn-outline-light:hover {
+            background: #3B82F6;
+        }
+
+        /* Hero section with smart photo */
+        .hero {
+            padding: 2rem 0 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+        }
+        .hero-content {
+            flex: 1.2;
+        }
+        .hero-badge {
+            background: rgba(59,130,246,0.2);
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #93c5fd;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(59,130,246,0.4);
+        }
+        .hero-content h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            background: linear-gradient(to right, #fff, #a5c9ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+        .hero-desc {
+            font-size: 1rem;
+            color: #b9c7dd;
+            margin: 1rem 0 1.8rem;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 1.8rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        .stat-item h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        .smart-photo {
+            flex: 0.8;
+            display: flex;
+            justify-content: center;
+        }
+        .photo-frame {
+            background: linear-gradient(145deg, #0f172a, #0a0f1c);
+            padding: 0.5rem;
+            border-radius: 2rem;
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);
+            border: 1px solid rgb(236, 201, 6);
+        }
+        .profile-main-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 1.5rem;
+            display: block;
+            background: #1e2a3a;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1.5rem 0;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 55%;
+            height: 3px;
+            background: linear-gradient(90deg, #3B82F6, #06b6d4);
+            border-radius: 4px;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.8rem;
+            margin: 1.5rem 0;
+        }
+        .project-card {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(6px);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(59,130,246,0.2);
+            transition: all 0.3s ease;
+        }
+       .project-screenshot {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.project-screenshot img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+        .project-card:hover .project-screenshot img {
+            transform: scale(1.03);
+        }
+        .project-info {
+            padding: 1.2rem;
+        }
+        .project-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        .project-info p {
+            font-size: 0.85rem;
+            color: #cbd5e6;
+            margin-bottom: 0.8rem;
+        }
+        .tech-tag {
+            background: #f37f037c;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            display: inline-block;
+            margin-right: 0.4rem;
+            margin-bottom: 0.3rem;
+        }
+
+        /* GALLERY SECTION (New) */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .gallery-item {
+            background: rgba(10, 20, 35, 0.6);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            border: 1px solid rgba(210, 115, 13, 0.3);
+            transition: 0.25s;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            transition: 0.3s;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.02);
+        }
+        .gallery-caption {
+            padding: 0.8rem;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 500;
+            background: rgba(0,0,0,0.3);
+            color: #b9c7dd;
+        }
+
+        /* Skills chips */
+        .skills-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+        .skill-chip {
+            background: rgba(59,130,246,0.12);
+            border: 1px solid rgba(59,130,246,0.3);
+            padding: 0.6rem 1.3rem;
+            border-radius: 60px;
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+        .skill-chip i {
+            margin-right: 6px;
+            color: #d2730d;
+        }
+
+        /* About */
+        .about-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            background: rgba(10, 20, 35, 0.5);
+            border-radius: 2rem;
+            padding: 1.8rem;
+            border: 1px solid rgba(59,130,246,0.2);
+        }
+        .mpesa-badge {
+            background: linear-gradient(135deg, #1e2a3a, #0f172a);
+            border-left: 4px solid #d2730d;
+            padding: 0.9rem;
+            border-radius: 1rem;
+            margin-top: 1rem;
+        }
+        footer {
+            margin-top: 4rem;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(59,130,246,0.2);
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .social-links a {
+            color: #cbd5e6;
+            font-size: 1.3rem;
+        }
+        .social-links a:hover {
+            color: #3B82F6;
+        }
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+        .btn-primary, .btn-outline {
+            padding: 0.7rem 1.4rem;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .btn-primary {
+            background: #d2730d;
+            color: white;
+        }
+        .btn-outline {
+            border: 1px solid #d2730d;
+            color: #e2e8ff;
+            background: transparent;
+        }
+
+        /* Mobile Menu */
+        @media (max-width: 820px) {
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                position: fixed;
+                top: 75px;
+                left: -100%;
+                width: 75%;
+                height: calc(100vh - 75px);
+                background: rgba(5, 11, 20, 0.97);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem 1.8rem;
+                gap: 1.8rem;
+                transition: 0.3s ease;
+                z-index: 999;
+                border-right: 1px solid #d2730d;
+                box-shadow: 4px 0 20px rgba(0,0,0,0.5);
+            }
+            .nav-links.active {
+                left: 0;
+            }
+            .nav-links a {
+                font-size: 1.2rem;
+                width: 100%;
+                padding: 0.5rem 0;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .profile-main-img {
+                width: 160px;
+                height: 160px;
+            }
+            .container {
+                padding: 0 1.2rem;
+            }
+        }
+        @media (max-width: 580px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+            .btn-group {
+                justify-content: center;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .glass-card {
+            background: rgba(18, 25, 45, 0.65);
+            backdrop-filter: blur(12px);
+            border-radius: 2rem;
+            padding: 2rem;
+            text-align: center;
+        }
+        .visit-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 18px;
+    background:#3B82F6;
+    color:#fff;
+    text-decoration:none;
+    border-radius:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.visit-btn:hover{
+    transform:translateY(-2px);
+    opacity:.9;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- top bar with LOGO IMAGE (my image) and mobile toggle -->
+        <div class="top-bar">
+            <div class="logo-img">
+                <!-- Luis Rotich profile image as logo -->
+                <img src="WhatsApp Image 2026-06-02 at 22.55.18.jpeg" alt="Luis Rotich" id="navLogoImg" onerror="this.src='https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=Luis+R'">
+                <span class="logo-text" >Luis Rotich </span>
+            </div>
+            <div class="menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#skills">Skills</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+
+        <!-- Hero Section with smart photo of me (same logo image but larger) -->
+        <section id="home">
+            <div class="hero">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-map-marker-alt"></i> Nairobi, Kenya · Software Engineer
+                    </div>
+                    <h1>Building Web3 & <span class="hero-highlight" style="color:#d2730d;">Full-Stack</span> Solutions</h1>
+                    <p class="hero-desc"> Software Developer focused on building modern websites, business systems, e-commerce platforms, and digital solutions that help businesses grow and operate efficiently.</p>
+                    <div class="btn-group">
+                        <a href="https://github.com/Luisrotich" class="btn-primary"><i class="fab fa-github"></i> GitHub</a>
+                   <a href="Luis_Rotich resume .pdf" target="_blank" class="btn-outline">
+    <i class="fas fa-file-alt"></i> View Resume
+</a>
+                    </div>
+                  
+                </div>
+                <div class="smart-photo">
+                    <div class="photo-frame">
+                        <!-- Smart professional image of Luis Rotich (same as logo but larger) -->
+                        <img src="WhatsApp Image 2026-06-02 at 22.55.18.jpeg" alt="Luis Rotich - Software Engineer" class="profile-main-img" id="heroImage" onerror="this.src='https://ui-avatars.com/api/?background=1E2A47&color=3B82F6&bold=true&size=180&name=Luis+R'">
+                    </div>
+                </div>
+            </div>
+        </section>
+          <!-- About -->
+        <section id="about">
+            <h2 class="section-title">About Luis Rotich</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Passionate software engineer from Kenya, specializing in web applications, blockchain solutions, POS systems, e-commerce platforms, and M-Pesa and other payments Integrations integrations. I build high-performance digital experiences that drive real business value.</p>
+                    <div class="mpesa-badge"><i class="fas fa-check-circle" style="color:#0bb638;"></i> <strong>M-Pesa and other payments Integration expert</strong> – STK Push, Paybill, BuyGoods, reversals & reconciliation.</div>
+                    <div class="mpesa-badge"><i class="fas fa-check-circle" style="color:#e36f09;"></i> <strong>Web3 & Blockchain</strong> – Smart contracts, DApps, DeFi integrations.</div>
+                    <p style="margin-top: 1rem;"><i ></i> Based in Nairobi, open for remote collaborations.</p>
+                </div>
+                <div style="text-align:center;"><i class="fas fa-code" style="font-size: 4rem; color:#d2730d;"></i><p style="margin-top:0.5rem;">Connecting Ideas Building Futures.</p></div>
+            </div>
+        </section>
+          <!-- Skills -->
+        <section id="skills">
+            <h2 class="section-title">Technical skills</h2>
+            <div class="skills-cloud">
+                <div class="skill-chip"><i class="fab fa-html5"></i> HTML5</div><div class="skill-chip"><i class="fab fa-css3-alt"></i> CSS3</div>
+                <div class="skill-chip"><i class="fab fa-js"></i> JavaScript</div><div class="skill-chip"><i class="fab fa-python"></i> Python</div>
+                <div class="skill-chip"><i class="fas fa-database"></i> MySQL</div><div class="skill-chip"><i class="fab fa-react"></i> React.js</div>
+                <div class="skill-chip"><i class="fab fa-node-js"></i> Node.js</div><div class="skill-chip"><i class="fas fa-link"></i> Blockchain / Web3</div>
+                <div class="skill-chip"><i class="fas fa-money-check-alt"></i> M-Pesa API</div><div class="skill-chip"><i class="fab fa-git-alt"></i> Git/GitHub</div>
+                <div class="skill-chip"><i class="fab fa-ethereum"></i> Solidity</div><div class="skill-chip"><i class="fas fa-database"></i> MongoDB</div>
+            </div>
+        </section>
+
+     <section id="projects">
+    <h2 class="section-title">Featured Projects</h2>
+
+    <div class="projects-grid">
+
+        <!-- POS System -->
+        <div class="project-card">
+            <div class="project-screenshot">
+                <img src="pos.jpeg" alt="POS Management System">
+            </div>
+            <div class="project-info">
+                <h3>POS Management System</h3>
+                <p>Omni-channel POS with inventory sync and real-time analytics.</p>
+                <div>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">MySQL</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Soko Exchange -->
+        <div class="project-card">
+            <div class="project-screenshot">
+                <img src="soko.jpeg" alt="Soko Exchange Marketplace">
+            </div>
+            <div class="project-info">
+                <h3>Soko Exchange Marketplace</h3>
+                <p>A modern online marketplace connecting buyers and sellers through a secure platform for product listings, transactions, and business growth.</p>
+                <div>
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+                <a href="#" target="_blank" class="visit-btn">Visit Project</a>
+            </div>
+        </div>
+
+        <!-- M-Pesa Integration -->
+        <div class="project-card">
+            <div class="project-screenshot">
+                <img src="mpesa.jpeg" alt="M-Pesa Integration">
+            </div>
+            <div class="project-info">
+                <h3>M-Pesa Integration</h3>
+                <p>STK Push, C2B, Reversal APIs with webhooks and secure payment processing.</p>
+                <div>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">MongoDB</span>
+                </div>
+                <a href="#" target="_blank" class="visit-btn">Visit Project</a>
+            </div>
+        </div>
+
+        <!-- Aberdare Gardens -->
+        <div class="project-card">
+            <div class="project-screenshot">
+                <img src="aberdare.jpeg" alt="Aberdare Gardens Website">
+            </div>
+            <div class="project-info">
+                <h3>Aberdare Gardens Website</h3>
+                <p>Modern hospitality website showcasing accommodation, dining, events, amenities, and online booking features.</p>
+                <div>
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+                <a href="https://aberdare-gardens.vercel.app" target="_blank" class="visit-btn">
+                    Visit Project
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+        <!-- GALLERY SECTION (new) - screenshots of works, dev life 
+        <section id="gallery">
+            <h2 class="section-title">Workspace & Project Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://placehold.co/600x400/0f172a/3B82F6?text=POS+Interface" alt="POS UI"><div class="gallery-caption">POS Dashboard Interface</div></div>
+                <div class="gallery-item"><img src="https://placehold.co/600x400/0f172a/3B82F6?text=M-Pesa+Payment+Flow" alt="M-Pesa Flow"><div class="gallery-caption">M-Pesa STK Push Simulation</div></div>
+                <div class="gallery-item"><img src="https://placehold.co/600x400/0f172a/3B82F6?text=Smart+Contract+Deploy" alt="Blockchain Deploy"><div class="gallery-caption">Ethereum Smart Contract Demo</div></div>
+                <div class="gallery-item"><img src="https://placehold.co/600x400/0f172a/3B82F6?text=E-commerce+Analytics" alt="Ecommerce"><div class="gallery-caption">E-commerce Analytics Panel</div></div>
+                <div class="gallery-item"><img src="https://placehold.co/600x400/0f172a/3B82F6?text=Coding+Session" alt="Coding setup"><div class="gallery-caption">Dev Setup & Collaboration</div></div>
+                <div class="gallery-item"><img src="https://placehold.co/600x400/0f172a/3B82F6?text=Web3+Dashboard" alt="Web3 Dashboard"><div class="gallery-caption">Web3 Wallet Connection</div></div>
+            </div>
+        </section>
+
+      -->
+
+        <!-- CTA -->
+        <section id="contact" style="margin: 3rem 0;">
+            <div class="glass-card">
+                <h2 style="font-size: 1.6rem;">Let’s build something extraordinary</h2>
+                <p style="margin: 0.8rem 0;">Need a POS, Web3 dApp, or M-Pesa integration? Let’s connect.</p>
+                <div class="btn-group" style="justify-content: center;">
+                    <a href="#" class="btn-primary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="#" class="btn-outline"><i class="fas fa-envelope"></i> rotichluis@gmail.com</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-dev"></i></a>
+            </div>
+            <p>© 2026 Luis Rotich SE— Kenya</p>
+            <p style="font-size:0.7rem;">Modern responsive portfolio with mobile navigation & gallery</p>
+        </footer>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const toggleBtn = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navLinks');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = toggleBtn.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    const icon = toggleBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = this.getAttribute('href');
+                if(target === '#') return;
+                const element = document.querySelector(target);
+                if(element) {
+                    e.preventDefault();
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
