@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
-    <title>Luis Rotich | Software Engineer · Web3 · M-Pesa Expert</title>
+    <title>Luis Rotich | Software Developer · AI Enthusiast · Blockchain Developer</title>
     <link rel="icon" type="image/jpeg" href="WhatsApp Image 2026-06-02 at 22.55.17.jpeg">
     
     <!-- Google Fonts + modern typography -->
@@ -33,6 +33,7 @@
             --dark-bg: #0a0f1c;
             --card-bg: rgba(15, 23, 42, 0.7);
             --glass-border: rgba(59,130,246,0.25);
+            --orange-accent: #d2730d;
         }
 
         ::-webkit-scrollbar {
@@ -52,8 +53,7 @@
             padding: 0 1.5rem;
         }
 
-        /* ========== MOBILE-FIRST & RESPONSIVE ========== */
-        /* Top bar with logo image + mobile menu toggle */
+        /* Top bar */
         .top-bar {
             display: flex;
             justify-content: space-between;
@@ -72,7 +72,7 @@
             height: 48px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #d2730d;
+            border: 2px solid var(--orange-accent);
             background: #0f172a;
             box-shadow: 0 0 12px rgba(210, 115, 13, 0.3);
         }
@@ -96,7 +96,7 @@
             display: none;
         }
         .menu-toggle:hover {
-            background: #d2730d;
+            background: var(--orange-accent);
         }
         .nav-links {
             display: flex;
@@ -125,7 +125,7 @@
             background: #3B82F6;
         }
 
-        /* Hero section with smart photo */
+        /* Hero */
         .hero {
             padding: 2rem 0 2rem;
             display: flex;
@@ -183,7 +183,7 @@
             padding: 0.5rem;
             border-radius: 2rem;
             box-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);
-            border: 1px solid rgb(236, 201, 6);
+            border: 1px solid var(--orange-accent);
         }
         .profile-main-img {
             width: 180px;
@@ -228,17 +228,16 @@
             border: 1px solid rgba(59,130,246,0.2);
             transition: all 0.3s ease;
         }
-       .project-screenshot {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-}
-
-.project-screenshot img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+        .project-screenshot {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .project-screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
         .project-card:hover .project-screenshot img {
             transform: scale(1.03);
         }
@@ -255,50 +254,18 @@
             margin-bottom: 0.8rem;
         }
         .tech-tag {
-            background: #f37f037c;
+            background: rgba(210, 115, 13, 0.3);
             padding: 0.2rem 0.7rem;
             border-radius: 20px;
             font-size: 0.7rem;
             display: inline-block;
             margin-right: 0.4rem;
             margin-bottom: 0.3rem;
+            color: #fcd34d;
         }
 
-        /* GALLERY SECTION (New) */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .gallery-item {
-            background: rgba(10, 20, 35, 0.6);
-            border-radius: 1.5rem;
-            overflow: hidden;
-            border: 1px solid rgba(210, 115, 13, 0.3);
-            transition: 0.25s;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            display: block;
-            transition: 0.3s;
-        }
-        .gallery-item:hover img {
-            transform: scale(1.02);
-        }
-        .gallery-caption {
-            padding: 0.8rem;
-            text-align: center;
-            font-size: 0.85rem;
-            font-weight: 500;
-            background: rgba(0,0,0,0.3);
-            color: #b9c7dd;
-        }
-
-        /* Skills chips */
-        .skills-cloud {
+        /* Skills & Services */
+        .skills-cloud, .services-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 0.8rem;
@@ -312,12 +279,20 @@
             font-weight: 500;
             font-size: 0.85rem;
         }
-        .skill-chip i {
+        .skill-chip i, .service-chip i {
             margin-right: 6px;
-            color: #d2730d;
+            color: var(--orange-accent);
+        }
+        .service-chip {
+            background: rgba(210, 115, 13, 0.1);
+            border: 1px solid rgba(210, 115, 13, 0.4);
+            padding: 0.6rem 1.3rem;
+            border-radius: 60px;
+            font-weight: 500;
+            font-size: 0.85rem;
         }
 
-        /* About */
+        /* About & Company */
         .about-grid {
             display: flex;
             flex-wrap: wrap;
@@ -327,12 +302,25 @@
             padding: 1.8rem;
             border: 1px solid rgba(59,130,246,0.2);
         }
-        .mpesa-badge {
+        .mpesa-badge, .company-badge {
             background: linear-gradient(135deg, #1e2a3a, #0f172a);
-            border-left: 4px solid #d2730d;
+            border-left: 4px solid var(--orange-accent);
             padding: 0.9rem;
             border-radius: 1rem;
             margin-top: 1rem;
+        }
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+        .interest-item {
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
         }
         footer {
             margin-top: 4rem;
@@ -369,13 +357,36 @@
             gap: 0.6rem;
         }
         .btn-primary {
-            background: #d2730d;
+            background: var(--orange-accent);
             color: white;
         }
         .btn-outline {
-            border: 1px solid #d2730d;
+            border: 1px solid var(--orange-accent);
             color: #e2e8ff;
             background: transparent;
+        }
+        .glass-card {
+            background: rgba(18, 25, 45, 0.65);
+            backdrop-filter: blur(12px);
+            border-radius: 2rem;
+            padding: 2rem;
+            text-align: center;
+        }
+        .visit-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            background: #3B82F6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transition: .3s;
+        }
+        .visit-btn:hover {
+            transform: translateY(-2px);
+            opacity: .9;
         }
 
         /* Mobile Menu */
@@ -397,7 +408,7 @@
                 gap: 1.8rem;
                 transition: 0.3s ease;
                 z-index: 999;
-                border-right: 1px solid #d2730d;
+                border-right: 1px solid var(--orange-accent);
                 box-shadow: 4px 0 20px rgba(0,0,0,0.5);
             }
             .nav-links.active {
@@ -433,43 +444,64 @@
             .section-title {
                 font-size: 1.6rem;
             }
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
         }
-        .glass-card {
-            background: rgba(18, 25, 45, 0.65);
-            backdrop-filter: blur(12px);
-            border-radius: 2rem;
-            padding: 2rem;
-            text-align: center;
-        }
-        .visit-btn{
-    display:inline-block;
-    margin-top:15px;
-    padding:10px 18px;
-    background:#3B82F6;
-    color:#fff;
-    text-decoration:none;
-    border-radius:15px;
-    font-weight:600;
-    transition:.3s;
+        #testimonials {
+    padding: 80px 20px;
+    text-align: center;
 }
 
-.visit-btn:hover{
-    transform:translateY(-2px);
-    opacity:.9;
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #d2730d;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(210, 115, 13, 0.3);
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 400px;
+    transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: #d2730d;
+}
+
+.quote-icon {
+    font-size: 2rem;
+    color: #d2730d;
+    margin-bottom: 15px;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.client-name {
+    color: #d2730d;
+    font-weight: 600;
 }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- top bar with LOGO IMAGE (my image) and mobile toggle -->
+        <!-- Top bar with Logo and Mobile -->
         <div class="top-bar">
             <div class="logo-img">
-                <!-- Luis Rotich profile image as logo -->
-                <img src="WhatsApp Image 2026-06-02 at 22.55.18.jpeg" alt="Luis Rotich" id="navLogoImg" onerror="this.src='https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=Luis+R'">
-                <span class="logo-text" >Luis Rotich </span>
+                <img src="WhatsApp Image 2026-06-02 at 22.55.18.jpeg" alt="Luis Rotich" onerror="this.src='https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=Luis+R'">
+                <span class="logo-text">Luis Rotich</span>
             </div>
             <div class="menu-toggle" id="mobileMenuToggle">
                 <i class="fas fa-bars"></i>
@@ -477,175 +509,228 @@
             <div class="nav-links" id="navLinks">
                 <a href="#home">Home</a>
                 <a href="#projects">Projects</a>
-                <a href="#gallery">Gallery</a>
                 <a href="#skills">Skills</a>
+                <a href="#services">Services</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
 
-        <!-- Hero Section with smart photo of me (same logo image but larger) -->
+        <!-- Hero Section -->
         <section id="home">
             <div class="hero">
                 <div class="hero-content">
                     <div class="hero-badge">
-                        <i class="fas fa-map-marker-alt"></i> Nairobi, Kenya · Software Engineer
+                        <i class="fas fa-map-marker-alt"></i> Karatina University, Kenya · IT Student & Entrepreneur
                     </div>
-                    <h1>Building Web3 & <span class="hero-highlight" style="color:#d2730d;">Full-Stack</span> Solutions</h1>
-                    <p class="hero-desc"> Software Developer focused on building modern websites, business systems, e-commerce platforms, and digital solutions that help businesses grow and operate efficiently.</p>
+                    <h1>Software Developer | AI Enthusiast | Blockchain Builder</h1>
+                    <p class="hero-desc">I help businesses transform ideas into powerful digital solutions — modern websites, business management systems, API integrations, and blockchain-powered applications.</p>
                     <div class="btn-group">
                         <a href="https://github.com/Luisrotich" class="btn-primary"><i class="fab fa-github"></i> GitHub</a>
-                   <a href="Luis_Rotich_resume.pdf" target="_blank" class="btn-outline">
-    <i class="fas fa-file-alt"></i> View Resume
-</a>
+                        <a href="Luis_Rotich_resume.pdf" target="_blank" class="btn-outline"><i class="fas fa-file-alt"></i> View Resume</a>
                     </div>
-                  
                 </div>
                 <div class="smart-photo">
                     <div class="photo-frame">
-                        <!-- Smart professional image of Luis Rotich (same as logo but larger) -->
-                        <img src="WhatsApp Image 2026-06-02 at 22.55.18.jpeg" alt="Luis Rotich - Software Engineer" class="profile-main-img" id="heroImage" onerror="this.src='https://ui-avatars.com/api/?background=1E2A47&color=3B82F6&bold=true&size=180&name=Luis+R'">
+                        <img src="WhatsApp Image 2026-06-02 at 22.55.18.jpeg" alt="Luis Rotich - Software Developer" class="profile-main-img" onerror="this.src='https://ui-avatars.com/api/?background=1E2A47&color=3B82F6&bold=true&size=180&name=Luis+R'">
                     </div>
                 </div>
             </div>
         </section>
-          <!-- About -->
+
+        <!-- About Me (full bio + company + goals) -->
         <section id="about">
-            <h2 class="section-title">About Luis Rotich</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>Passionate software engineer from Kenya, specializing in web applications, blockchain solutions, POS systems, e-commerce platforms, and M-Pesa and other payments Integrations integrations. I build high-performance digital experiences that drive real business value.</p>
-                    <div class="mpesa-badge"><i class="fas fa-check-circle" style="color:#0bb638;"></i> <strong>M-Pesa and other payments Integration expert</strong> – STK Push, Paybill, BuyGoods, reversals & reconciliation.</div>
-                    <div class="mpesa-badge"><i class="fas fa-check-circle" style="color:#e36f09;"></i> <strong>Web3 & Blockchain</strong> – Smart contracts, DApps, DeFi integrations.</div>
-                    <p style="margin-top: 1rem;"><i ></i> Based in Nairobi, open for remote collaborations.</p>
+                     <div style="text-align:center;">
+                    <i class="fas fa-laptop-code" style="font-size: 3.5rem; color:var(--orange-accent);"></i>
+                   
                 </div>
-                <div style="text-align:center;"><i class="fas fa-code" style="font-size: 4rem; color:#d2730d;"></i><p style="margin-top:0.5rem;">Connecting Ideas Building Futures.</p></div>
+                <br>
+                    <p><strong>Luis Rotich</strong> — 22 years old, IT student at Karatina University (Kenya), software developer, blogger, and entrepreneur. I specialize in web development, software solutions, blockchain technologies, and digital business solutions. I'm passionate about building innovative systems that solve real-world problems and creating technology-driven businesses.</p>
+                    <p style="margin-top: 0.8rem;">I enjoy learning new technologies and continuously improving my skills in software engineering, artificial intelligence, blockchain development, cybersecurity, data science, and web technologies.</p>
+                    
+                    <div class="mpesa-badge">
+                        <i class="fas fa-building" style="color:var(--orange-accent);"></i> <strong>Company: L.R SPACE SOFTWARE AND WEB DESIGN COMPANY</strong><br>
+                        Services: Website Design, Software Development, E-commerce Solutions, Business Automation, API Integration, Branding Solutions, Technical Support.
+                    </div>
+
+                    <div class="company-badge">
+                        <i class="fas fa-bullseye"></i> <strong>Career Goals:</strong> Become an AI Engineer · Build Successful Software Products · Develop Blockchain Solutions · Launch Cryptocurrency Projects · Create Innovative Technology Startups · Expand globally.
+                    </div>
+                </div>
+               
             </div>
         </section>
-          <!-- Skills -->
+
+        <!-- Skills (comprehensive from profile) -->
         <section id="skills">
-            <h2 class="section-title">Technical skills</h2>
+            <h2 class="section-title">Technical & Professional Skills</h2>
             <div class="skills-cloud">
-                <div class="skill-chip"><i class="fab fa-html5"></i> HTML5</div><div class="skill-chip"><i class="fab fa-css3-alt"></i> CSS3</div>
-                <div class="skill-chip"><i class="fab fa-js"></i> JavaScript</div><div class="skill-chip"><i class="fab fa-python"></i> Python</div>
-                <div class="skill-chip"><i class="fas fa-database"></i> MySQL</div><div class="skill-chip"><i class="fab fa-react"></i> React.js</div>
-                <div class="skill-chip"><i class="fab fa-node-js"></i> Node.js</div><div class="skill-chip"><i class="fas fa-link"></i> Blockchain / Web3</div>
-                <div class="skill-chip"><i class="fas fa-money-check-alt"></i> M-Pesa API</div><div class="skill-chip"><i class="fab fa-git-alt"></i> Git/GitHub</div>
-                <div class="skill-chip"><i class="fab fa-ethereum"></i> Solidity</div><div class="skill-chip"><i class="fas fa-database"></i> MongoDB</div>
+                <div class="skill-chip"><i class="fab fa-html5"></i> HTML5</div>
+                <div class="skill-chip"><i class="fab fa-css3-alt"></i> CSS3</div>
+                <div class="skill-chip"><i class="fab fa-js"></i> JavaScript</div>
+                <div class="skill-chip"><i class="fab fa-python"></i> Python</div>
+                <div class="skill-chip"><i class="fas fa-database"></i> MySQL</div>
+                <div class="skill-chip"><i class="fas fa-mobile-alt"></i> Responsive Design</div>
+                <div class="skill-chip"><i class="fas fa-money-check-alt"></i> M-Pesa Daraja API</div>
+                <div class="skill-chip"><i class="fas fa-store"></i> POS Systems</div>
+                <div class="skill-chip"><i class="fas fa-chart-line"></i> Business Management</div>
+                <div class="skill-chip"><i class="fab fa-ethereum"></i> Solidity / Web3</div>
+                <div class="skill-chip"><i class="fas fa-link"></i> Blockchain Dev</div>
+                <div class="skill-chip"><i class="fas fa-brain"></i> Artificial Intelligence</div>
+                <div class="skill-chip"><i class="fas fa-shield-alt"></i> Cybersecurity</div>
+                <div class="skill-chip"><i class="fas fa-pen-fancy"></i> Blogging & Content</div>
+                <div class="skill-chip"><i class="fas fa-chart-simple"></i> Digital Marketing</div>
+                <div class="skill-chip"><i class="fas fa-file-alt"></i> Technical Documentation</div>
+                <div class="skill-chip"><i class="fas fa-chalkboard-user"></i> Business Development</div>
             </div>
         </section>
 
-     <section id="projects">
-    <h2 class="section-title">Featured Projects</h2>
+    
 
-    <div class="projects-grid">
+       
 
-        <!-- POS System -->
-        <div class="project-card">
-            <div class="project-screenshot">
-                <img src="pos.jpeg" alt="POS Management System">
-            </div>
-            <div class="project-info">
-                <h3>POS Management System</h3>
-                <p>Omni-channel POS with inventory sync and real-time analytics.</p>
-                <div>
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">MySQL</span>
+        <!-- Featured Projects (updated with real descriptions reflecting profile) -->
+        <section id="projects">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- POS System -->
+                <div class="project-card">
+                    <div class="project-screenshot">
+                        <img src="pos.jpeg" alt="POS Management System">
+                    </div>
+                    <div class="project-info">
+                        <h3>POS & Business Management Suite</h3>
+                        <p>Full-featured Point of Sale with inventory tracking, sales analytics, and multi-user support — built for retail and hospitality.</p>
+                        <div><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Java</span></div>
+                    </div>
+                </div>
+                <!-- Soko Exchange Marketplace -->
+                <div class="project-card">
+                    <div class="project-screenshot">
+                        <img src="soko.jpeg" alt="Soko Exchange Marketplace">
+                    </div>
+                    <div class="project-info">
+                        <h3>Soko Exchange Marketplace</h3>
+                        <p>Online marketplace connecting buyers & sellers with secure listings, transactions, and digital business growth tools.</p>
+                        <div><span class="tech-tag">HTML/CSS</span><span class="tech-tag">Node.js</span><span class="tech-tag">PostgreSQL</span></div>
+                        <a href="#" class="visit-btn">Visit Project</a>
+                    </div>
+                </div>
+                <!-- M-Pesa Integration -->
+                <div class="project-card">
+                    <div class="project-screenshot">
+                        <img src="mpesa.jpeg" alt="M-Pesa Daraja API">
+                    </div>
+                    <div class="project-info">
+                        <h3>M-Pesa Daraja Integration</h3>
+                        <p>STK Push, Paybill/BuyGoods, C2B webhooks, transaction reversal & reconciliation — seamless payment flows for businesses.</p>
+                        <div><span class="tech-tag">Python</span><span class="tech-tag">API</span><span class="tech-tag">PostgreSQL</span></div>
+                        <a href="#" class="visit-btn">Integration Demo</a>
+                    </div>
+                </div>
+                <!-- Aberdare Gardens -->
+                <div class="project-card">
+                    <div class="project-screenshot">
+                        <img src="aberdare.jpeg" alt="Aberdare Gardens Website">
+                    </div>
+                    <div class="project-info">
+                        <h3>Aberdare Gardens Website</h3>
+                        <p>Modern hospitality website showcasing accommodations, dining, events, and online booking experience.</p>
+                        <div><span class="tech-tag">HTML/CSS/JS</span><span class="tech-tag">Responsive</span><span class="tech-tag">Node.js</span></div>
+                        <a href="https://aberdare-gardens.vercel.app" target="_blank" class="visit-btn">Live Demo</a>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Company Info Card + Short Professional Bio -->
+       <section>
+    <div style="background: rgba(15, 23, 42, 0.5); border-radius: 1.5rem; padding: 1.5rem; margin: 1.5rem 0; border: 1px solid rgba(210,115,13,0.3);">
+        <h3 style="color: var(--orange-accent);">
+            <i class="fas fa-link"></i> ROTICHCHAIN ACCADEMY
+        </h3>
+
+        <p style="margin-top: 0.5rem;">
+            <strong>About ROTICHCHAIN ACCADEMY:</strong> It is a technology company focused on blockchain innovation, software development, web design, Web3 solutions, and digital transformation. We develop secure, scalable, and innovative applications that help businesses and individuals leverage modern technology to grow and succeed in the digital economy.
+        </p>
+
+        <p style="margin-top: 0.8rem;">
+            <i class="fas fa-quote-left"></i>
+            <em>"Empowering the future through blockchain, software innovation, and digital excellence."</em>
+        </p>
+    </div>
+</section>
+<section id="testimonials">
+    <h2 class="section-title">Client Testimonials</h2>
+
+    <div class="testimonials-container">
+
+        <div class="testimonial-card">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p class="testimonial-text">
+                "The website exceeded our expectations."
+            </p>
+            <h4 class="client-name">— Client</h4>
         </div>
 
-        <!-- Soko Exchange -->
-        <div class="project-card">
-            <div class="project-screenshot">
-                <img src="soko.jpeg" alt="Soko Exchange Marketplace">
-            </div>
-            <div class="project-info">
-                <h3>Soko Exchange Marketplace</h3>
-                <p>A modern online marketplace connecting buyers and sellers through a secure platform for product listings, transactions, and business growth.</p>
-                <div>
-                    <span class="tech-tag">HTML</span>
-                    <span class="tech-tag">CSS</span>
-                    <span class="tech-tag">JavaScript</span>
-                </div>
-                <a href="#" target="_blank" class="visit-btn">Visit Project</a>
-            </div>
-        </div>
-
-        <!-- M-Pesa Integration -->
-        <div class="project-card">
-            <div class="project-screenshot">
-                <img src="mpesa.jpeg" alt="M-Pesa Integration">
-            </div>
-            <div class="project-info">
-                <h3>M-Pesa Integration</h3>
-                <p>STK Push, C2B, Reversal APIs with webhooks and secure payment processing.</p>
-                <div>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">Express</span>
-                    <span class="tech-tag">MongoDB</span>
-                </div>
-                <a href="#" target="_blank" class="visit-btn">Visit Project</a>
-            </div>
-        </div>
-
-        <!-- Aberdare Gardens -->
-        <div class="project-card">
-            <div class="project-screenshot">
-                <img src="aberdare.jpeg" alt="Aberdare Gardens Website">
-            </div>
-            <div class="project-info">
-                <h3>Aberdare Gardens Website</h3>
-                <p>Modern hospitality website showcasing accommodation, dining, events, amenities, and online booking features.</p>
-                <div>
-                    <span class="tech-tag">HTML</span>
-                    <span class="tech-tag">CSS</span>
-                    <span class="tech-tag">JavaScript</span>
-                </div>
-                <a href="https://aberdare-gardens.vercel.app" target="_blank" class="visit-btn">
-                    Visit Project
-                </a>
-            </div>
+        <div class="testimonial-card">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p class="testimonial-text">
+                "Professional service and timely delivery."
+            </p>
+            <h4 class="client-name">— Business Owner</h4>
         </div>
 
     </div>
 </section>
-
-        <!-- GALLERY SECTION (new) - screenshots of works, dev life 
-        <section id="gallery">
-            <h2 class="section-title">Workspace & Project Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="https://placehold.co/600x400/0f172a/3B82F6?text=POS+Interface" alt="POS UI"><div class="gallery-caption">POS Dashboard Interface</div></div>
-                <div class="gallery-item"><img src="https://placehold.co/600x400/0f172a/3B82F6?text=M-Pesa+Payment+Flow" alt="M-Pesa Flow"><div class="gallery-caption">M-Pesa STK Push Simulation</div></div>
-                <div class="gallery-item"><img src="https://placehold.co/600x400/0f172a/3B82F6?text=Smart+Contract+Deploy" alt="Blockchain Deploy"><div class="gallery-caption">Ethereum Smart Contract Demo</div></div>
-                <div class="gallery-item"><img src="https://placehold.co/600x400/0f172a/3B82F6?text=E-commerce+Analytics" alt="Ecommerce"><div class="gallery-caption">E-commerce Analytics Panel</div></div>
-                <div class="gallery-item"><img src="https://placehold.co/600x400/0f172a/3B82F6?text=Coding+Session" alt="Coding setup"><div class="gallery-caption">Dev Setup & Collaboration</div></div>
-                <div class="gallery-item"><img src="https://placehold.co/600x400/0f172a/3B82F6?text=Web3+Dashboard" alt="Web3 Dashboard"><div class="gallery-caption">Web3 Wallet Connection</div></div>
+            <!-- Services offered (from company profile) -->
+        <section id="services">
+            <h2 class="section-title">What I Offer</h2>
+            <div class="skills-cloud">
+                <div class="service-chip"><i class="fas fa-globe"></i> Website Development</div>
+                <div class="service-chip"><i class="fas fa-cart-shopping"></i> E-commerce Applications</div>
+                <div class="service-chip"><i class="fas fa-school"></i> School Management Systems</div>
+                <div class="service-chip"><i class="fas fa-cash-register"></i> POS Systems</div>
+                <div class="service-chip"><i class="fas fa-boxes"></i> Inventory Management</div>
+                <div class="service-chip"><i class="fas fa-comment-dollar"></i> M-Pesa Integration</div>
+                <div class="service-chip"><i class="fas fa-wrench"></i> Website Maintenance</div>
+                <div class="service-chip"><i class="fas fa-server"></i> Web Hosting Setup</div>
+                <div class="service-chip"><i class="fas fa-code-branch"></i> API Integration</div>
             </div>
         </section>
 
-      -->
-
-        <!-- CTA -->
-        <section id="contact" style="margin: 3rem 0;">
+        <!-- CTA Contact -->
+        <section id="contact" style="margin: 2rem 0;">
             <div class="glass-card">
-                <h2 style="font-size: 1.6rem;">Let’s build something extraordinary</h2>
-                <p style="margin: 0.8rem 0;">Need a POS, Web3 dApp, or M-Pesa integration? Let’s connect.</p>
+                <h2 style="font-size: 1.6rem;">Let's Build Your Digital Vision</h2>
+                <p style="margin: 0.8rem 0;">Looking for a website, business system, M-Pesa integration, or blockchain solution? Let’s connect.</p>
                 <div class="btn-group" style="justify-content: center;">
-                    <a href="#" class="btn-primary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                    <a href="#" class="btn-outline"><i class="fas fa-envelope"></i> rotichluis@gmail.com</a>
+                    <a href="https://wa.me/254745972350" target="_blank" class="btn-primary">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="mailto:rotichluis@gmail.com" class="btn-outline">
+                        <i class="fas fa-envelope"></i> rotichluis@gmail.com
+                    </a>
+                    <a href="tel:0745972350" class="btn-outline">
+                        <i class="fas fa-phone-alt"></i> Call
+                    </a>
                 </div>
             </div>
         </section>
 
         <footer>
             <div class="social-links">
-                <a href="#"><i class="fab fa-github"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-dev"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              
             </div>
-            <p>© 2026 Luis Rotich SE— Kenya</p>
-            <p style="font-size:0.7rem;">Modern responsive portfolio with mobile navigation & gallery</p>
+            <p>© 2026 Luis Rotich — Software Developer | Blogger | Entrepreneur — Nairobi, Kenya</p>
+            <p style="font-size:0.7rem; margin-top: 0.5rem;">L.R SPACE SOFTWARE AND WEB DESIGN COMPANY — Innovating the future with code.</p>
         </footer>
     </div>
 
@@ -677,7 +762,7 @@
                 }
             });
         });
-        // Smooth scroll for all anchor links
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const target = this.getAttribute('href');
