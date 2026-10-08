@@ -3,7 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
-    <title>Luis Rotich | Software Developer · AI Enthusiast · Blockchain Developer</title>
+    <title>Luis Rotich | Software Engineer &amp; Full-Stack Developer in Kenya</title>
+    <meta name="description" content="Luis Rotich is a Kenyan software engineer building web applications, POS systems, M-Pesa integrations, e-commerce platforms and business management systems.">
+    <meta name="author" content="Luis Rotich">
+    <meta name="theme-color" content="#050B14">
+    <link rel="canonical" href="https://luisrotich.xyz/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luisrotich.xyz/">
+    <meta property="og:locale" content="en_KE">
+    <meta property="og:title" content="Luis Rotich | Software Engineer &amp; Full-Stack Developer">
+    <meta property="og:description" content="Production-minded web applications, POS systems, M-Pesa integrations and business platforms for businesses in Kenya and beyond.">
+    <meta property="og:image" content="https://luisrotich.xyz/photo.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Luis Rotich | Software Engineer &amp; Full-Stack Developer">
+    <meta name="twitter:description" content="Building practical digital products for real businesses.">
+    <meta name="twitter:image" content="https://luisrotich.xyz/photo.jpeg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Luis Rotich",
+      "url": "https://luisrotich.xyz/",
+      "jobTitle": "Software Engineer and Full-Stack Developer",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "KE"
+      },
+      "description": "Kenyan software engineer building web applications, POS systems, M-Pesa integrations, e-commerce platforms and business management systems.",
+      "sameAs": [
+        "https://github.com/Luisrotich",
+        "https://x.com/Rotichchain"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "ROTICHCHAIN"
+      }
+    }
+    </script>
     <link rel="icon" type="image/jpeg" href="favicon.jpeg">
     
     <!-- Google Fonts + modern typography -->
@@ -19,8 +55,8 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #050B14;
-            color: #eef2ff;
+            background-color: #000000;
+            color: #ffffff;
             line-height: 1.5;
             scroll-behavior: smooth;
             overflow-x: hidden;
@@ -33,7 +69,7 @@
             --dark-bg: #0a0f1c;
             --card-bg: rgba(15, 23, 42, 0.7);
             --glass-border: rgba(59,130,246,0.25);
-            --orange-accent: #d2730d;
+            --orange-accent: #38bdf8;
         }
 
         ::-webkit-scrollbar {
@@ -254,8 +290,8 @@
             margin-bottom: 0.8rem;
         }
         .tech-tag {
-            background: rgba(210, 115, 13, 0.1);
-            border: 1px solid rgba(210, 115, 13, 0.4);
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.35);
             padding: 0.2rem 0.7rem;
             border-radius: 20px;
             font-size: 0.7rem;
@@ -285,8 +321,8 @@
             color: var(--orange-accent);
         }
         .service-chip {
-            background: rgba(210, 115, 13, 0.1);
-            border: 1px solid rgba(210, 115, 13, 0.4);
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.35);
             padding: 0.6rem 1.3rem;
             border-radius: 60px;
             font-weight: 500;
@@ -342,6 +378,8 @@
         .social-links a:hover {
             color: #3B82F6;
         }
+        .footer-links { display: flex; justify-content: center; gap: 1rem; margin: 0.8rem 0; }
+        .footer-links a { color: #93c5fd; text-decoration: none; }
         .btn-group {
             display: flex;
             gap: 1rem;
@@ -459,53 +497,68 @@
                 font-size: 1.6rem;
             }
         }
-        #testimonials {
-    padding: 80px 20px;
-    text-align: center;
-}
+        .section-title { color: #eef2ff; margin-bottom: 1.5rem; }
+        .btn-primary, .btn-primary1 { background: linear-gradient(135deg, #2563eb, #0891b2); }
+        .btn-primary:hover, .btn-primary1:hover { filter: brightness(1.12); transform: translateY(-2px); }
 
-.section-title {
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: #d2730d;
+.hero-content h1 { max-width: 760px; font-size: clamp(2.6rem, 5vw, 4.5rem); }
+.hero-desc { max-width: 700px; font-size: 1.1rem; }
+.hero-roles { color: #93c5fd; font-weight: 600; letter-spacing: 0.02em; }
+.section-intro { max-width: 720px; color: #b9c7dd; margin: -0.5rem 0 1.5rem; }
+.section-block { margin: 3rem 0; }
+.projects-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); }
+.project-card { border-color: rgba(59, 130, 246, 0.28); }
+.project-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28); }
+.project-screenshot { aspect-ratio: 16 / 9; background: #0f172a; display: flex; flex-direction: column; }
+.project-screenshot::before {
+    content: ""; display: block; flex: 0 0 22px;
+    background:
+        radial-gradient(circle at 14px 11px, #fb7185 0 3px, transparent 3.5px),
+        radial-gradient(circle at 27px 11px, #fbbf24 0 3px, transparent 3.5px),
+        radial-gradient(circle at 40px 11px, #34d399 0 3px, transparent 3.5px),
+        linear-gradient(#101b2d, #101b2d);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
 }
-
-.testimonials-container {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+.project-screenshot img { height: calc(100% - 22px); object-fit: cover; transition: transform 0.35s ease; }
+.project-links { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
+.project-links a, .text-link { color: #93c5fd; text-decoration: none; font-weight: 600; }
+.project-links a:hover, .text-link:hover { color: #fff; }
+.case-study { margin-top: 1rem; border-top: 1px solid rgba(148, 163, 184, 0.2); padding-top: 0.8rem; }
+.case-study summary { cursor: pointer; color: #93c5fd; font-weight: 600; }
+.case-study-content { display: grid; gap: 0.75rem; padding-top: 0.8rem; }
+.case-study-content h4 { color: #e2e8f0; font-size: 0.9rem; }
+.case-study-content p, .case-study-content li { color: #b9c7dd; font-size: 0.84rem; }
+.case-study-content ul { padding-left: 1.2rem; }
+.skills-grid, .services-grid, .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.skill-group, .service-card, .process-step, .github-card {
+    background: var(--card-bg); border: 1px solid var(--glass-border); border-radius: 1rem; padding: 1.25rem;
 }
-
-.testimonial-card {
-    background: rgba(15, 23, 42, 0.7);
-    border: 1px solid rgba(210, 115, 13, 0.3);
-    border-radius: 15px;
-    padding: 25px;
-    max-width: 400px;
-    transition: 0.3s ease;
+.skill-group h3, .service-card h3 { margin-bottom: 0.6rem; color: #bfdbfe; }
+.skill-group p, .service-card p, .process-step p, .github-card p { color: #b9c7dd; font-size: 0.9rem; }
+.service-card i { color: var(--accent); font-size: 1.3rem; margin-bottom: 0.7rem; }
+.process-number { color: #60a5fa; font-weight: 800; font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.company-section { margin: 3rem 0; }
+.github-card { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+.contact-form { max-width: 760px; margin: 1.5rem auto 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; text-align: left; }
+.contact-form label { display: grid; gap: 0.4rem; color: #cbd5e6; font-size: 0.9rem; }
+.contact-form .form-wide { grid-column: 1 / -1; }
+.contact-form input, .contact-form textarea, .contact-form select {
+    width: 100%; border: 1px solid rgba(148, 163, 184, 0.35); border-radius: 0.7rem;
+    background: #0a0f1c; color: #eef2ff; padding: 0.8rem; font: inherit;
 }
-
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    border-color: #d2730d;
+.contact-form textarea { min-height: 120px; resize: vertical; }
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { outline: 2px solid #3b82f6; outline-offset: 1px; }
+.contact-form button { border: 0; cursor: pointer; font: inherit; justify-self: start; }
+.form-note { grid-column: 1 / -1; color: #94a3b8; font-size: 0.8rem; }
+.social-links a:focus-visible, a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid #60a5fa; outline-offset: 3px; }
+@media (max-width: 580px) {
+    .contact-form { grid-template-columns: 1fr; }
+    .contact-form .form-wide, .form-note { grid-column: auto; }
+    .hero-content h1 { font-size: 2.35rem; }
+    .github-card { align-items: flex-start; }
 }
-
-.quote-icon {
-    font-size: 2rem;
-    color: #d2730d;
-    margin-bottom: 15px;
-}
-
-.testimonial-text {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
-
-.client-name {
-    color: #d2730d;
-    font-weight: 600;
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
     </style>
 </head>
@@ -517,13 +570,12 @@
                 <img src="photo.jpeg" alt="Luis Rotich" onerror="this.src='https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=Luis+R'">
                 <span class="logo-text">Luis Rotich</span>
             </div>
-            <div class="menu-toggle" id="mobileMenuToggle">
+            <button class="menu-toggle" id="mobileMenuToggle" type="button" aria-label="Open navigation menu" aria-controls="navLinks" aria-expanded="false">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
             <div class="nav-links" id="navLinks">
                 <a href="#home">Home</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
+                <a href="#projects">Work</a>
                 <a href="#services">Services</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
@@ -535,13 +587,14 @@
             <div class="hero">
                 <div class="hero-content">
                     <div class="hero-badge">
-                        <i class="fas fa-map-marker-alt"></i> Nairobi, Kenya - Software Engineer & Entrepreneur
+                        <i class="fas fa-map-marker-alt"></i> Kenya · Available worldwide
                     </div>
-                    <h1>Software Developer / AI Enthusiast / Blockchain Builder</h1>
-                    <p class="hero-desc">I help businesses transform ideas into powerful digital solutions and modern websites, business management systems, API integrations, and blockchain-powered applications.</p>
+                    <h1>I Build Software That Runs Real Businesses.</h1>
+                    <p class="hero-roles">Software Engineer · Full-Stack Developer · AI &amp; Blockchain Builder</p>
+                    <p class="hero-desc">I design and build production-ready web applications, POS systems, e-commerce platforms, business management systems and M-Pesa-powered applications for businesses in Kenya and beyond.</p>
                     <div class="btn-group">
-                        <a href="https://github.com/Luisrotich" class="btn-primary1"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="LuisrotichCV.pdf" target="_blank" class="btn-outline"><i class="fas fa-file-alt"></i> View My CV</a>
+                        <a href="#projects" class="btn-primary1"><i class="fas fa-briefcase"></i> View My Projects</a>
+                        <a href="#contact" class="btn-outline"><i class="fas fa-paper-plane"></i> Hire Me</a>
                     </div>
                 </div>
                 <div class="smart-photo">
@@ -551,129 +604,10 @@
                 </div>
             </div>
         </section>
-<section id="about">
-    <h2 class="section-title">About Me</h2>
-
-    <div class="about-grid">
-
-        <div class="about-text">
-
-            <!-- Personal Profile -->
-            <div style="text-align:center; margin-bottom:2rem;">
-                <i class="fas fa-laptop-code"
-                   style="font-size:3.5rem; color:var(--orange-accent);"></i>
-
-                <h3 style="margin-top:1rem;">Luis Rotich</h3>
-
-                <p>
-                    I am a software developer, blogger, and entrepreneur specializing in web development,
-                    software solutions, blockchain technologies, and digital business solutions.
-                    I am passionate about building innovative systems that solve real-world problems
-                    and creating technology-driven businesses.
-                </p>
-
-                <p style="margin-top:1rem;">
-                    I enjoy learning new technologies and continuously improving my skills in
-                    software engineering, artificial intelligence, blockchain development,
-                    cybersecurity, data science, and web technologies.
-                </p>
-            </div>
-
-
-            <!-- Company Card -->
-            <div style="
-                background: rgba(15, 23, 42, 0.5);
-                border-radius: 1.5rem;
-                padding: 2rem;
-                margin-top: 2rem;
-                border: 1px solid rgba(210,115,13,0.3);
-                text-align: center;
-            ">
-
-                <img src="rotich.jpeg"
-                     alt="ROTICHCHAIN ACCADEMY"
-                     style="
-                        width:250px;
-                        height:250px;
-                        object-fit:cover;
-                        border-radius:50%;
-                        border:3px solid var(--orange-accent);
-                        margin-bottom:1.5rem;
-                     ">
-
-                <h3 style="color: var(--orange-accent);">
-                    <i class="fas fa-link"></i>
-                    ROTICHCHAIN ACADEMY COMPANY FOUNDER.
-                </h3>
-
-                <p style="margin-top:1rem;">
-                    <strong> ROTICHCHAIN ACADEMY:</strong>
-                    We are a technology company focused on blockchain innovation,
-                    software development, web design, Web3 solutions, and digital transformation.
-                    We develop secure, scalable, and innovative applications that help businesses
-                    and individuals leverage modern technology to grow and succeed in the digital economy.
-                </p>
-
-                <p style="margin-top:1.5rem;" color="green">
-                    <i class="fas fa-quote-left"></i>
-                    <em>
-                        "Empowering the future through blockchain, software innovation,
-                        and digital excellence."
-                    </em>
-                </p>
-
-            </div>
-
-
-            <!-- Career Goals Card -->
-            <div class="company-badge" style="
-                margin-top:2rem;
-                padding:1.5rem;
-                border-radius:1rem;
-                background: rgba(15,23,42,0.5);
-                border:1px solid rgba(210,115,13,0.3);
-            ">
-
-                <h3 style="color:var(--orange-accent); margin-bottom:1rem;">
-                    <i class="fas fa-bullseye"></i>
-                    Career Goals
-                </h3>
-
-                <ul style="line-height:2;">
-                 
-                    <li>Build successful software products.</li>
-                    <li>Develop blockchain and Web3 solutions.</li>
-                    <li>Launch cryptocurrency projects.</li>
-                    <li>Create innovative technology startups.</li>
-                    <li>Expand globally and impact businesses through technology.</li>
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-     
-
-        <!-- Skills (comprehensive from profile) -->
-        <section id="skills">
-            <h2 class="section-title">Technical & Professional Skills</h2>
-            <div class="skills-cloud">
-               
-                <div class="skill-chip"><i class="fas fa-money-check-alt"></i> M-Pesa Daraja API</div>
-                <div class="skill-chip"><i class="fas fa-store"></i> POS Systems</div>
-                <div class="skill-chip"><i class="fas fa-cubes"></i> Inventory Management</div>
-                <div class="skill-chip"><i class="fas fa-school"></i> School Management Systems</div>
-                <div class="skill-chip"><i class="fas fa-cash-register"></i> E-commerce APP Development</div>
-                
-         </div>
-        </section>
-
-
         <!-- Featured Projects -->
-<section id="projects">
-    <h2 class="section-title">Featured Projects</h2>
+<section id="projects" class="section-block">
+    <h2 class="section-title">Selected Work</h2>
+    <p class="section-intro">A selection of web products and business systems built to solve practical problems. Open a case study to explore the product thinking and engineering details.</p>
 
     <div class="projects-grid">
 
@@ -698,9 +632,23 @@
 
                 <a href="https://aberdare-gardens.vercel.app"
                    target="_blank"
+                   rel="noopener noreferrer"
                    class="visit-btn">
-                    Visit Site
+                    Live Demo →
                 </a>
+                <details class="case-study">
+                    <summary>Case Study</summary>
+                    <div class="case-study-content">
+                        <div><h4>Problem</h4><p>Visitors need a clear way to discover the gardens, event spaces and services.</p></div>
+                        <div><h4>Solution</h4><p>A responsive showcase website presenting the venue and its offerings.</p></div>
+                        <div><h4>Technologies</h4><p>HTML, CSS, JavaScript and Node.js.</p></div>
+                        <div><h4>Architecture</h4><p>Web presentation layer with responsive pages and a Vercel-hosted public site.</p></div>
+                        <div><h4>Key features</h4><ul><li>Venue and service information</li><li>Responsive page layout</li></ul></div>
+                        <div><h4>Screenshot</h4><p>The project preview above shows the website.</p></div>
+                        <div><h4>Challenges</h4><p>Presenting the venue clearly across screen sizes and making key information easy to find.</p></div>
+                        <div><h4>Results</h4><p>A live digital showcase for Aberdare Gardens.</p></div>
+                    </div>
+                </details>
             </div>
         </div>
 
@@ -729,9 +677,23 @@
 
                 <a href="https://pos-system-2zf8.onrender.com/pos"
                    target="_blank"
+                   rel="noopener noreferrer"
                    class="visit-btn">
-                    Visit Site
+                    Live Demo →
                 </a>
+                <details class="case-study">
+                    <summary>Case Study</summary>
+                    <div class="case-study-content">
+                        <div><h4>Problem</h4><p>Retail teams need one workflow for point-of-sale activity, stock visibility and sales records.</p></div>
+                        <div><h4>Solution</h4><p>A cloud-based POS that combines sales, inventory, receipts, reporting and M-Pesa STK Push payments.</p></div>
+                        <div><h4>Technologies</h4><p>Flask, PostgreSQL, JavaScript and M-Pesa Daraja API.</p></div>
+                        <div><h4>Architecture</h4><p>Flask application backed by PostgreSQL, with payment initiation through Daraja and transaction processing integrated into checkout.</p></div>
+                        <div><h4>Key features</h4><ul><li>Sales tracking and inventory management</li><li>Receipt printing and sales reports</li><li>M-Pesa STK Push payments</li></ul></div>
+                        <div><h4>Screenshots</h4><p>The project preview above shows the POS interface.</p></div>
+                        <div><h4>Challenges</h4><p>Keeping sales and stock workflows consistent while handling an external payment provider.</p></div>
+                        <div><h4>Results</h4><p>A live POS experience is available to explore through the demo link.</p></div>
+                    </div>
+                </details>
             </div>
         </div>
 
@@ -760,9 +722,23 @@
 
                 <a href="https://m-pesa-stk-push-project.onrender.com/"
                    target="_blank"
+                   rel="noopener noreferrer"
                    class="visit-btn">
-                    Visit Site
+                    Live Demo →
                 </a>
+                <details class="case-study">
+                    <summary>Case Study</summary>
+                    <div class="case-study-content">
+                        <div><h4>Problem</h4><p>Fundraisers need a straightforward way to publish campaigns, accept contributions and follow progress.</p></div>
+                        <div><h4>Solution</h4><p>A crowdfunding platform for individuals, organizations and startups to create campaigns and collect donations.</p></div>
+                        <div><h4>Technologies</h4><p>Flask, PostgreSQL, JavaScript and payment API integration.</p></div>
+                        <div><h4>Architecture</h4><p>Flask web application with PostgreSQL persistence and an integrated payment flow.</p></div>
+                        <div><h4>Key features</h4><ul><li>Campaign publishing</li><li>Donation and goal tracking</li><li>Payment integration</li></ul></div>
+                        <div><h4>Screenshots</h4><p>The project preview above shows the platform interface.</p></div>
+                        <div><h4>Challenges</h4><p>Connecting campaign progress with payment activity so users can follow fundraising goals.</p></div>
+                        <div><h4>Results</h4><p>A live campaign experience is available to explore through the demo link.</p></div>
+                    </div>
+                </details>
             </div>
         </div>
 
@@ -787,11 +763,71 @@
                     <span class="tech-tag">PostgreSQL</span>
                 </div>
 
-                <a href="https://soko-exchange-app-2.onrender.com" class="visit-btn">
-                Visit Site
+                <a href="https://soko-exchange-app-2.onrender.com" target="_blank" rel="noopener noreferrer" class="visit-btn">
+                Live Demo →
                 </a>
+                <details class="case-study">
+                    <summary>Case Study</summary>
+                    <div class="case-study-content">
+                        <div><h4>Problem</h4><p>Buyers and sellers need a shared online place to discover listings and support marketplace activity.</p></div>
+                        <div><h4>Solution</h4><p>An online marketplace connecting buyers and sellers through digital listings and transaction tools.</p></div>
+                        <div><h4>Technologies</h4><p>Node.js, PostgreSQL, HTML, CSS and JavaScript.</p></div>
+                        <div><h4>Architecture</h4><p>Node.js application backed by PostgreSQL for marketplace data.</p></div>
+                        <div><h4>Key features</h4><ul><li>Buyer and seller marketplace</li><li>Listings and e-commerce tools</li></ul></div>
+                        <div><h4>Screenshots</h4><p>The project preview above shows the marketplace interface.</p></div>
+                        <div><h4>Challenges</h4><p>Structuring marketplace information so products and seller offerings are easy to browse.</p></div>
+                        <div><h4>Results</h4><p>A live marketplace demo is available to explore.</p></div>
+                    </div>
+                </details>
             </div>
         </div>
+
+        <!-- Foody App -->
+<div class="project-card">
+    <div class="project-screenshot">
+        <img src="foofy.jpeg" alt="Waterfront Kitchen food ordering platform">
+    </div>
+
+    <div class="project-info">
+        <h3>Waterfront Kitchen — Food Ordering Platform</h3>
+
+        <p>
+            A progressive food-ordering platform where customers can browse meals,
+            manage a cart, create accounts and pay with M-Pesa, while the team manages
+            orders through an administration dashboard.
+        </p>
+
+        <div>
+            <span class="tech-tag">HTML/CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Neon</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">M-Pesa Daraja API</span>
+            <span class="tech-tag">PWA</span>
+        </div>
+
+        <a href="https://waterfront-kitchen.onrender.com/"
+           class="visit-btn"
+           target="_blank"
+           rel="noopener noreferrer">
+            Live Demo →
+        </a>
+        <details class="case-study">
+            <summary>Case Study</summary>
+            <div class="case-study-content">
+                <div><h4>Problem</h4><p>Customers need a convenient online way to order food and pay, while staff need a place to manage incoming orders.</p></div>
+                <div><h4>Solution</h4><p>A food-ordering platform with customer accounts, a cart, M-Pesa checkout and an order-management dashboard.</p></div>
+                <div><h4>Technologies</h4><p>Flask, PostgreSQL on Neon, M-Pesa Daraja API and progressive web app technologies.</p></div>
+                <div><h4>Architecture</h4><p>Flask application and PostgreSQL data store; Daraja payment requests and callbacks connect payment status to the ordering flow. The PWA supports an installable web experience.</p></div>
+                <div><h4>Key features</h4><ul><li>Food browsing, customer accounts and cart</li><li>M-Pesa payments and payment callbacks</li><li>Order management and admin dashboard</li><li>Installable PWA experience</li></ul></div>
+                <div><h4>Screenshots</h4><p>The project preview above shows the Waterfront Kitchen ordering experience.</p></div>
+                <div><h4>Challenges</h4><p>Coordinating order state with asynchronous payment callbacks and making the customer ordering journey work across devices.</p></div>
+                <div><h4>Results</h4><p>A live food-ordering experience is available to explore.</p></div>
+            </div>
+        </details>
+    </div>
+</div>
 
         <!-- School Management Portal -->
         <div class="project-card">
@@ -822,63 +858,99 @@
                     <span class="tech-tag">REST API</span>
                 </div>
 
-                <a href="#" class="visit-btn">
-                    Live Demo Soon...
-                </a>
+                <span class="visit-btn">Demo not public</span>
+                <details class="case-study">
+                    <summary>Case Study</summary>
+                    <div class="case-study-content">
+                        <div><h4>Problem</h4><p>Schools need coordinated access to academic, student and fee-management workflows.</p></div>
+                        <div><h4>Solution</h4><p>A management portal with separate student, lecturer and administrator workflows.</p></div>
+                        <div><h4>Technologies</h4><p>Flask, PostgreSQL, JavaScript and REST APIs.</p></div>
+                        <div><h4>Architecture</h4><p>Flask application with PostgreSQL persistence and role-specific dashboards; the described fee flow uses M-Pesa STK Push.</p></div>
+                        <div><h4>Key features</h4><ul><li>Unit registration, timetables and examination results</li><li>Fee statements and M-Pesa STK Push</li><li>Course, grade, finance and records management</li></ul></div>
+                        <div><h4>Screenshots</h4><p>The project preview above shows the school portal interface.</p></div>
+                        <div><h4>Challenges</h4><p>Separating permissions and workflows across students, lecturers and administrators.</p></div>
+                        <div><h4>Results</h4><p>The portal is presented as a project preview; a public live demo is not currently linked.</p></div>
+                    </div>
+                </details>
             </div>
         </div>
 
     </div>
 </section>
 
-    
-
-       
-
-
-     
-<section id="testimonials">
-    <h2 class="section-title">Client Testimonials</h2>
-
-    <div class="testimonials-container">
-
-        <div class="testimonial-card">
-            <i class="fas fa-quote-left quote-icon"></i>
-            <p class="testimonial-text">
-                "The website exceeded our expectations."
-            </p>
-            <h4 class="client-name">— Client</h4>
-        </div>
-
-        <div class="testimonial-card">
-            <i class="fas fa-quote-left quote-icon"></i>
-            <p class="testimonial-text">
-                "Professional service and timely delivery."
-            </p>
-            <h4 class="client-name">— Business Owner</h4>
-        </div>
-
+<section id="skills" class="section-block">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+        <article class="skill-group"><h3>Frontend</h3><p>HTML · CSS · JavaScript · React · Progressive Web Apps · Responsive UI</p></article>
+        <article class="skill-group"><h3>Backend</h3><p>Python · Flask · Node.js · REST APIs · Authentication · Role-based access control</p></article>
+        <article class="skill-group"><h3>Databases</h3><p>PostgreSQL · Neon · SQL · Relational data modeling</p></article>
+        <article class="skill-group"><h3>Payments</h3><p>M-Pesa Daraja API · STK Push · Payment callbacks · Transaction verification</p></article>
+        <article class="skill-group"><h3>Infrastructure &amp; tools</h3><p>Git · GitHub · Render · Cloudflare · Vercel</p></article>
+        <article class="skill-group"><h3>Exploring</h3><p>Artificial intelligence · Blockchain · Web3</p></article>
     </div>
 </section>
-            <!-- Services offered (from company profile) -->
-        <section id="services">
-            <h2 class="section-title">What I Offer</h2>
-            <div class="skills-cloud">
-                <div class="service-chip"><i class="fas fa-globe"></i> Website Development</div>
-                <div class="service-chip"><i class="fas fa-cart-shopping"></i> E-commerce Applications with Mpesa</div>
-                <div class="service-chip"><i class="fas fa-school"></i> School Management Systems with Mpesa</div>
-                <div class="service-chip"><i class="fas fa-cash-register"></i> POS Systems with Mpesa</div>
-                <div class="service-chip"><i class="fas fa-boxes"></i> Inventory Management</div>
-          </div>
-        </section>
+
+<section id="about" class="section-block">
+    <h2 class="section-title">About Luis</h2>
+    <div class="about-grid">
+        <div class="about-text">
+            <p>I'm a software engineer focused on building practical digital products for businesses. I specialize in full-stack web applications, business management systems, POS platforms, M-Pesa integrations and scalable APIs.</p>
+            <p style="margin-top:1rem;">I'm also exploring AI, blockchain and Web3 technologies to build the next generation of digital products.</p>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="section-block">
+    <h2 class="section-title">Services</h2>
+    <div class="services-grid">
+        <article class="service-card"><i class="fas fa-laptop-code"></i><h3>Web Applications</h3><p>Custom websites and web applications shaped around your business requirements.</p></article>
+        <article class="service-card"><i class="fas fa-cart-shopping"></i><h3>E-commerce</h3><p>Online stores with product management, ordering, payments and M-Pesa integration.</p></article>
+        <article class="service-card"><i class="fas fa-cash-register"></i><h3>POS Systems</h3><p>Sales, inventory, reports, user workflows and payment management in one system.</p></article>
+        <article class="service-card"><i class="fas fa-money-bill-wave"></i><h3>M-Pesa Integration</h3><p>Daraja API integrations, STK Push, payment callbacks and transaction processing.</p></article>
+        <article class="service-card"><i class="fas fa-school"></i><h3>Management Systems</h3><p>School, business, inventory and organizational management platforms.</p></article>
+        <article class="service-card"><i class="fas fa-brain"></i><h3>AI Solutions</h3><p>AI-powered automation, chatbots and intelligent business tools, scoped to a real use case.</p></article>
+    </div>
+</section>
+
+<section id="process" class="section-block">
+    <h2 class="section-title">How I Work</h2>
+    <div class="process-grid">
+        <article class="process-step"><span class="process-number">01</span><h3>Discovery</h3><p>Understand the business, users and requirements.</p></article>
+        <article class="process-step"><span class="process-number">02</span><h3>Design</h3><p>Shape the user experience and system architecture.</p></article>
+        <article class="process-step"><span class="process-number">03</span><h3>Development</h3><p>Build the application and integrate the required services.</p></article>
+        <article class="process-step"><span class="process-number">04</span><h3>Testing</h3><p>Check functionality, security considerations and performance.</p></article>
+        <article class="process-step"><span class="process-number">05</span><h3>Deployment</h3><p>Deploy the product and configure its infrastructure.</p></article>
+        <article class="process-step"><span class="process-number">06</span><h3>Support</h3><p>Maintain, improve and support the product after launch.</p></article>
+    </div>
+</section>
+
+<section class="company-section">
+    <h2 class="section-title">Founder — ROTICHCHAIN</h2>
+    <div class="about-grid">
+        <img src="rotich.jpeg" alt="ROTICHCHAIN Academy" style="width:150px;height:150px;object-fit:cover;border-radius:1rem;">
+        <div>
+            <h3>Connecting Ideas. Building Futures.</h3>
+            <p style="margin-top:0.6rem;">ROTICHCHAIN is a technology company focused on software development, Web3, blockchain innovation and digital transformation.</p>
+            <a class="text-link" href="https://x.com/Rotichchain" target="_blank" rel="noopener noreferrer">Explore ROTICHCHAIN on X →</a>
+        </div>
+    </div>
+</section>
+
+<section class="section-block" aria-labelledby="github-title">
+    <h2 class="section-title" id="github-title">Open Source &amp; Development</h2>
+    <div class="github-card">
+        <div><p>Explore my repositories, source code and ongoing development on GitHub.</p><p style="margin-top:0.5rem;">Selected technologies: Python · Flask · JavaScript · Node.js · PostgreSQL</p></div>
+        <a class="btn-outline" href="https://github.com/Luisrotich" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub →</a>
+    </div>
+</section>
 
         <!-- CTA Contact -->
         <section id="contact" style="margin: 2rem 0;">
             <div class="glass-card">
-                <h2 style="font-size: 1.6rem;">Let's Build Your Digital Vision</h2>
-                <p style="margin: 0.8rem 0;">Looking for a website, business system, M-Pesa integration, or blockchain solution? Let’s connect.</p>
+                <h2 style="font-size: 1.8rem;">Have a project in mind?<br>Let's build it.</h2>
+                <p style="margin: 0.8rem 0;">Tell me what you're trying to build and I'll help you turn the idea into a working product.</p>
                 <div class="btn-group" style="justify-content: center;">
-                    <a href="https://wa.me/254745972350" target="_blank" class="btn-primary">
+                    <a href="https://wa.me/254745972350" target="_blank" rel="noopener noreferrer" class="btn-primary">
                         <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                     <a href="mailto:rotichluis@gmail.com" class="btn-outline">
@@ -887,19 +959,30 @@
                     <a href="tel:0745972350" class="btn-outline">
                         <i class="fas fa-phone-alt"></i> Call
                     </a>
-                
                 </div>
+                <form class="contact-form" id="projectRequestForm">
+                    <label>Name<input type="text" name="name" autocomplete="name" required></label>
+                    <label>Email<input type="email" name="email" autocomplete="email" required></label>
+                    <label>Phone (optional)<input type="tel" name="phone" autocomplete="tel"></label>
+                    <label>Budget<input type="text" name="budget" placeholder="Your approximate budget or 'not sure yet'"></label>
+                    <label class="form-wide">What do you want to build?<textarea name="project" required></textarea></label>
+                    <button class="btn-primary" type="submit">Send Project Request <i class="fas fa-arrow-right"></i></button>
+                    <p class="form-note">This form opens a pre-filled email in your default mail app; it does not send data to a server.</p>
+                </form>
             </div>
         </section>
 
         <footer>
             <div class="social-links">
-                <a href="https://github.com/Luisrotich"><i class="fab fa-github"></i></a>
-                <a href="https://x.com/Rotichchain"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61589204083554"><i class="fab fa-facebook-f"></i></a>
-              
+                <a href="https://github.com/Luisrotich" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/Rotichchain" aria-label="X" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61589204083554" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
             </div>
-            <p>© 2026 Luis Rotich - Nairobi . <a href="MyDocuments.html" target="_blank" style="color: whitesmoke;text-decoration: none;">Kenya</a></p>
+            <div class="footer-links">
+                <a href="LuisrotichCV.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
+                <a href="MyDocuments.html" target="_blank" rel="noopener noreferrer">Document Library</a>
+            </div>
+            <p>© 2026 Luis Rotich · Kenya · Available worldwide</p>
         </footer>
     </div>
 
@@ -914,9 +997,13 @@
                 if (navMenu.classList.contains('active')) {
                     icon.classList.remove('fa-bars');
                     icon.classList.add('fa-times');
+                    toggleBtn.setAttribute('aria-expanded', 'true');
+                    toggleBtn.setAttribute('aria-label', 'Close navigation menu');
                 } else {
                     icon.classList.remove('fa-times');
                     icon.classList.add('fa-bars');
+                    toggleBtn.setAttribute('aria-expanded', 'false');
+                    toggleBtn.setAttribute('aria-label', 'Open navigation menu');
                 }
             });
         }
@@ -928,6 +1015,8 @@
                     const icon = toggleBtn.querySelector('i');
                     icon.classList.remove('fa-times');
                     icon.classList.add('fa-bars');
+                    toggleBtn.setAttribute('aria-expanded', 'false');
+                    toggleBtn.setAttribute('aria-label', 'Open navigation menu');
                 }
             });
         });
@@ -942,6 +1031,22 @@
                     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
+        });
+        const projectRequestForm = document.getElementById('projectRequestForm');
+        projectRequestForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const formData = new FormData(projectRequestForm);
+            const message = [
+                `Name: ${formData.get('name')}`,
+                `Email: ${formData.get('email')}`,
+                `Phone: ${formData.get('phone') || 'Not provided'}`,
+                `Budget: ${formData.get('budget') || 'Not provided'}`,
+                '',
+                'Project details:',
+                formData.get('project')
+            ].join('\n');
+            const subject = encodeURIComponent(`Project enquiry from ${formData.get('name')}`);
+            window.location.href = `mailto:rotichluis@gmail.com?subject=${subject}&body=${encodeURIComponent(message)}`;
         });
     </script>
 </body>
